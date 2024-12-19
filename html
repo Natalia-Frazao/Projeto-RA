@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR.js PECS System</title>
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .ui-controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 15px;
+      background-color: #f7d9d9; /*rosa*/
+      color: #333;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #f4c4c4; /* rosa */
+    }
+  </style>
+</head>
+<body>
+  <div class="ui-controls">
+    <button id="playSound">Tocar Barulho de Chuva</button>
+    <button id="pauseSound">Pausar barulho de chuva</button>
+  </div>
+
+  <a-scene embedded arjs>
+    <!-- Marker 1 -->
+    <a-marker preset="custom" type="pattern" url="https://cdn.glitch.global/28a7040d-0c4a-4e12-9824-d6945a610385/pattern-images.patt?v=1734631147658">
+      <a-box position="0 0.5 0" material="color: red;"></a-box>
+      <a-text value="Rain" position="0 1 0" align="center"></a-text>
+    </a-marker>
+
+    <!-- Marker 2 -->
+    <a-marker preset="custom" type="pattern" url="https://cdn.glitch.global/28a7040d-0c4a-4e12-9824-d6945a610385/pattern-images.patt?v=1734631147658">
+      <a-sphere position="0 0.5 0" material="color: blue;"></a-sphere>
+      <a-text value="Sunny" position="0 1 0" align="center"></a-text>
+    </a-marker>
+
+    <!-- Camera -->
+    <a-entity camera></a-entity>
+  </a-scene>
+
+  <!-- Audio -->
+  <audio id="rainSound" loop>
+    <source src="https://cdn.glitch.global/28a7040d-0c4a-4e12-9824-d6945a610385/chuva-1-119168.mp3?v=1734631308036" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const playButton = document.getElementById('playSound');
+    const pauseButton = document.getElementById('pauseSound');
+    const rainSound = document.getElementById('rainSound');
+
+    playButton.addEventListener('click', () => {
+      rainSound.play();
+    });
+
+    pauseButton.addEventListener('click', () => {
+      rainSound.pause();
+    });
+  </script>
+</body>
+</html>
