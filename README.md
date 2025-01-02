@@ -1,6 +1,8 @@
 # Projeto-RA com AR.JS
 Link do glitch:https://glitch.com/edit/#!/realidade-aumentadaoptativa?path=index.html%3A11%3A23
 
+Link do artigo: https://docs.google.com/document/d/1OHjoYgXhYIwXMWSs8fyZhll5cIu7aurT/edit
+
 *Palavras Chaves: TEA; tecnologias assistivas para autistas ; cartões de comunicação; comunicação alternativa;suporte visual e auditivo; inovação inclusiva; uso da tecnologia;para aprimorar habilidades sociais; Inclusão tecnólogica; Realidade aumentada.
 
 
