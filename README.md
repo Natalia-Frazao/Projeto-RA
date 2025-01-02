@@ -7,6 +7,8 @@
 
 *Modelo de rastreio:botões e reconhecimento de superfícies
 
+*Tecnologia:AR.JS
+
 *Interface: dispositivos com tela touch-screen ou mouse Bluetooth.
 
 *Objetivo : Desenvolver cartões de comunicação visual e auditiva em realidade aumentada
